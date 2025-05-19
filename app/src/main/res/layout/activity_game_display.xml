@@ -22,6 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="100dp"
         android:layout_gravity="center"
+        android:gravity="center"
         android:textColor="@color/white"
         android:text=""
         android:textSize="35sp" />
@@ -33,7 +34,11 @@
         android:layout_gravity="center|left"
         android:layout_marginLeft="50dp"
         android:gravity="center"
-        android:text="True" />
+        android:backgroundTint="@color/white"
+        android:text="True"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="25sp"/>
 
     <Button
         android:id="@+id/falseButton"
@@ -41,7 +46,23 @@
         android:layout_height="70dp"
         android:layout_gravity="center|right"
         android:layout_marginRight="50dp"
-        android:text="False" />
+        android:backgroundTint="@color/white"
+        android:text="False"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="25sp"/>
+
+    <TextView
+        android:id="@+id/outComeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:text=""
+        android:textSize="35sp"
+        android:layout_marginTop="60dp" />
 
     <Button
         android:id="@+id/nextButton"
@@ -49,8 +70,26 @@
         android:layout_height="70dp"
         android:text="Next"
         android:layout_gravity="center"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="150dp"
+        android:backgroundTint="@color/white"
         android:visibility="gone"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        />
+
+    <Button
+        android:id="@+id/ReviewBtn"
+        android:layout_width="110dp"
+        android:layout_height="70dp"
+        android:text="Review"
+        android:layout_gravity="center"
+        android:layout_marginTop="180dp"
+        android:visibility="gone"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="15sp"
 
         />
 

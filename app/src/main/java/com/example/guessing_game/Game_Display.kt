@@ -1,10 +1,10 @@
 package com.example.guessing_game
 
+import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
-import android.widget.Toast
 import android.widget.VideoView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -13,16 +13,20 @@ import androidx.appcompat.app.AppCompatActivity
 class Game_Display : AppCompatActivity() {
 
     private val questions = listOf(
-        "The Earth is flat.",
-        "The sky is blue.",
-        "Water boils at 100 degrees Celsius.",
-        "The sun revolves around the Earth.",
+        "The Capital of France is Berlin.",
+        "Humans need oxygen to survive.",
+        "The sun is a star, not a planet",
+        "The Great Barrier Reef is indeed the largest coral reef system",
+        "water freezes at 0 degrees celsius",
+        "DNA is found in all living things",
         "There are 7 continents."
     )
 
     private val answers = listOf(
         false,
         true,
+        true,
+        false,
         true,
         false,
         true
@@ -36,6 +40,8 @@ class Game_Display : AppCompatActivity() {
     private lateinit var trueButton: Button
     private lateinit var falseButton: Button
     private lateinit var nextButton: Button
+    private lateinit var reviewButton: Button
+    private lateinit var outComeText: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -55,6 +61,8 @@ class Game_Display : AppCompatActivity() {
         trueButton = findViewById(R.id.trueButton)
         falseButton = findViewById(R.id.falseButton)
         nextButton = findViewById(R.id.nextButton)
+        reviewButton = findViewById(R.id.ReviewBtn)
+        outComeText = findViewById(R.id.outComeText)
 
         displayQuestion()
 
@@ -69,6 +77,9 @@ class Game_Display : AppCompatActivity() {
         nextButton.setOnClickListener {
             moveToNextQuestion()
         }
+        reviewButton.setOnClickListener {
+            moveToNextSreen()
+        }
     }
 
     private fun displayQuestion() {
@@ -77,13 +88,16 @@ class Game_Display : AppCompatActivity() {
             trueButton.isEnabled = true
             falseButton.isEnabled = true
             nextButton.visibility = Button.GONE
+            outComeText.text = ""
             answered = false
         } else {
-            // Game over, display score or restart
-            Toast.makeText(this, "Game Over! Your score: $score", Toast.LENGTH_LONG).show()
+
+            outComeText.text = "Game Over! Your score: $score"
             trueButton.isEnabled = false
             falseButton.isEnabled = false
             nextButton.visibility = Button.GONE
+            questionTextView.visibility = TextView.GONE
+            reviewButton.visibility = Button.VISIBLE
         }
     }
 
@@ -92,9 +106,9 @@ class Game_Display : AppCompatActivity() {
             val correctAnswer = answers[currentQuestionIndex]
             if (userAnswer == correctAnswer) {
                 score++
-                Toast.makeText(this, "Correct!", Toast.LENGTH_SHORT).show()
+                outComeText.text = "Correct!"
             } else {
-                Toast.makeText(this, "Incorrect!", Toast.LENGTH_SHORT).show()
+                outComeText.text = "Incorrect!"
             }
             answered = true
             trueButton.isEnabled = false
@@ -106,6 +120,17 @@ class Game_Display : AppCompatActivity() {
     private fun moveToNextQuestion() {
         currentQuestionIndex++
         displayQuestion()
+    }
+
+    private fun moveToNextSreen() {
+        val intent = Intent(this, DisplayScoreScreenActivity::class.java)
+
+        intent.putStringArrayListExtra("Questions", ArrayList(questions))
+        intent.putStringArrayListExtra("Answers", ArrayList(answers.map { if (it) "True" else "False" }))
+        intent.putExtra("SCORE", score)
+
+        startActivity(intent)
+        finish()
     }
 }
 
