@@ -7,7 +7,7 @@
 
 ## Links
 - **GitHub Repository**: []
-- **YouTube Video**: []
+- **YouTube Video**: [https://youtu.be/hhuaVJi_5Co]
 
 --------------------------------------------------
 
