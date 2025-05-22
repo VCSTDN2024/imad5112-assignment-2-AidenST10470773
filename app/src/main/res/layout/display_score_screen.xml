@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    The Independent Institute of Education. (2025) Introduction to Mobile Application Development:
+    IMAD5112/p/w Module Manual. [Module Manual]. South Africa: The Independent Institute of Education (Pty) Ltd.
+
+    AstroPlaneet (2024) Space and universe wallpaper at 120fps. [TikTok video]. 29 December.
+    Available at: https://vm.tiktok.com/ZMSF94kom/ (Accessed: 22 May 2025).
+-->
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
