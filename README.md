@@ -91,9 +91,13 @@ I utilize **GitHub Actions** to automate parts of the development lifecycle. Thi
 -----------------------------------------------------------------------------------------------------------
 
 ## App Screenshots:
+![Screenshot 2025-05-22 112700](https://github.com/user-attachments/assets/72c10621-2ab9-46fa-98b3-1e16c6f292ce)
 
+![Screenshot 2025-05-22 112652](https://github.com/user-attachments/assets/1ebf63bb-35b8-4e4f-9ed4-156d0f26dd64)
 
-**Example:**
+![Screenshot 2025-05-22 112708](https://github.com/user-attachments/assets/884fe5fe-c52d-4979-98e0-3a11fc4ccbbd)
+
+![Screenshot 2025-05-22 112839](https://github.com/user-attachments/assets/561fb4ca-bc70-4e25-801a-81436d8a6e33)
 
 ---------------------------------------------------------------------------------------------------
 
@@ -102,6 +106,7 @@ I utilize **GitHub Actions** to automate parts of the development lifecycle. Thi
 
 
 A video showcasing the app's functionality can be viewed here: [Link to your video demo]
+
 
 ---------------------------------------------------------------------------------------------------
 
