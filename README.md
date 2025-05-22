@@ -105,7 +105,7 @@ I utilize **GitHub Actions** to automate parts of the development lifecycle. Thi
 
 
 
-A video showcasing the app's functionality can be viewed here: [Link to your video demo]
+A video showcasing the app's functionality can be viewed here: [https://youtube.com/shorts/RLHG6WFsR3g?si=3_IceO5fkOVko3Ge]
 
 
 ---------------------------------------------------------------------------------------------------
